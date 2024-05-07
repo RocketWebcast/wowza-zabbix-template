@@ -28,7 +28,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>getWowzaInfo.py[&quot;-u&quot;,&quot;{$WOWUSER}&quot;,&quot;-p&quot;,&quot;{$WOWPASS}&quot;,&quot;-h&quot;,&quot;{HOST.CONN}&quot;,&quot;-P&quot;,&quot;8086&quot;,&quot;-a&quot;,&quot;conn&quot;]</key>
+                    <key>getWowzaInfo.py[&quot;-u&quot;,&quot;{$WOWZAUSER}&quot;,&quot;-p&quot;,&quot;{$WOWZAPASS}&quot;,&quot;-h&quot;,&quot;{$WOWZAHOST}&quot;,&quot;-P&quot;,&quot;{$WOWZAPORT}&quot;,&quot;-a&quot;,&quot;conn&quot;]</key>
                     <delay>30</delay>
                     <history>90</history>
                     <trends>365</trends>
@@ -57,8 +57,10 @@
                     <port/>
                     <description>Define macros:&#13;
 &#13;
-{$WOWUSER}&#13;
-{$WOWPASS}&#13;
+{$WOWZAHOST}&#13;
+{$WOWZAPORT}&#13;
+{$WOWZAUSER}&#13;
+{$WOWZAPASS}&#13;
 &#13;
 for authentication.</description>
                     <inventory_link>0</inventory_link>
@@ -76,14 +78,14 @@ for authentication.</description>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>getWowzaInfo.py[&quot;-u&quot;,&quot;{$WOWUSER}&quot;,&quot;-p&quot;,&quot;{$WOWPASS}&quot;,&quot;-h&quot;,&quot;{HOST.CONN}&quot;,&quot;-P&quot;,&quot;8086&quot;,&quot;-a&quot;,&quot;appnum&quot;]</key>
+                    <key>getWowzaInfo.py[&quot;-u&quot;,&quot;{$WOWZAUSER}&quot;,&quot;-p&quot;,&quot;{$WOWZAPASS}&quot;,&quot;-h&quot;,&quot;{$WOWZAHOST}&quot;,&quot;-P&quot;,&quot;{$WOWZAPORT}&quot;,&quot;-a&quot;,&quot;appnum&quot;]</key>
                     <delay>30</delay>
                     <history>90</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
-                    <units>lives</units>
+                    <units>users</units>
                     <delta>0</delta>
                     <snmpv3_contextname/>
                     <snmpv3_securityname/>
@@ -105,8 +107,260 @@ for authentication.</description>
                     <port/>
                     <description>Define macros:&#13;
 &#13;
-{$WOWUSER}&#13;
-{$WOWPASS}&#13;
+{$WOWZAHOST}&#13;
+{$WOWZAPORT}&#13;
+{$WOWZAUSER}&#13;
+{$WOWZAPASS}&#13;
+&#13;
+for authentication.</description>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Wowza Info</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>Wowza Uptime in Seconds</name>
+                    <type>10</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>getWowzaInfo.py[&quot;-u&quot;,&quot;{$WOWZAUSER}&quot;,&quot;-p&quot;,&quot;{$WOWZAPASS}&quot;,&quot;-h&quot;,&quot;{$WOWZAHOST}&quot;,&quot;-P&quot;,&quot;{$WOWZAPORT}&quot;,&quot;-a&quot;,&quot;uptime&quot;]</key>
+                    <delay>30</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>FLOAT</value_type>
+                    <allowed_hosts/>
+                    <units>uptime</units>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description>Define macros:&#13;
+&#13;
+{$WOWZAHOST}&#13;
+{$WOWZAPORT}&#13;
+{$WOWZAUSER}&#13;
+{$WOWZAPASS}&#13;
+&#13;
+for authentication.</description>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Wowza Info</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>Wowza Global Total Connections</name>
+                    <type>10</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>getWowzaInfo.py[&quot;-u&quot;,&quot;{$WOWZAUSER}&quot;,&quot;-p&quot;,&quot;{$WOWZAPASS}&quot;,&quot;-h&quot;,&quot;{$WOWZAHOST}&quot;,&quot;-P&quot;,&quot;{$WOWZAPORT}&quot;,&quot;-a&quot;,&quot;conntotal&quot;]</key>
+                    <delay>30</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units>users</units>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description>Define macros:&#13;
+&#13;
+{$WOWZAHOST}&#13;
+{$WOWZAPORT}&#13;
+{$WOWZAUSER}&#13;
+{$WOWZAPASS}&#13;
+&#13;
+for authentication.</description>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Wowza Info</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>Wowza Total Bytes In</name>
+                    <type>10</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>getWowzaInfo.py[&quot;-u&quot;,&quot;{$WOWZAUSER}&quot;,&quot;-p&quot;,&quot;{$WOWZAPASS}&quot;,&quot;-h&quot;,&quot;{$WOWZAHOST}&quot;,&quot;-P&quot;,&quot;{$WOWZAPORT}&quot;,&quot;-a&quot;,&quot;inbytes&quot;]</key>
+                    <delay>30</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>FLOAT</value_type>
+                    <allowed_hosts/>
+                    <units>B</units>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description>Define macros:&#13;
+&#13;
+{$WOWZAHOST}&#13;
+{$WOWZAPORT}&#13;
+{$WOWZAUSER}&#13;
+{$WOWZAPASS}&#13;
+&#13;
+for authentication.</description>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Wowza Info</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>Wowza Total Bytes Out</name>
+                    <type>10</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>getWowzaInfo.py[&quot;-u&quot;,&quot;{$WOWZAUSER}&quot;,&quot;-p&quot;,&quot;{$WOWZAPASS}&quot;,&quot;-h&quot;,&quot;{$WOWZAHOST}&quot;,&quot;-P&quot;,&quot;{$WOWZAPORT}&quot;,&quot;-a&quot;,&quot;outbytes&quot;]</key>
+                    <delay>30</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>FLOAT</value_type>
+                    <allowed_hosts/>
+                    <units>B</units>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description>Define macros:&#13;
+&#13;
+{$WOWZAHOST}&#13;
+{$WOWZAPORT}&#13;
+{$WOWZAUSER}&#13;
+{$WOWZAPASS}&#13;
+&#13;
+for authentication.</description>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Wowza Info</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>Wowza All Info Combined</name>
+                    <type>10</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>getWowzaInfo.py[&quot;-u&quot;,&quot;{$WOWZAUSER}&quot;,&quot;-p&quot;,&quot;{$WOWZAPASS}&quot;,&quot;-h&quot;,&quot;{$WOWZAHOST}&quot;,&quot;-P&quot;,&quot;{$WOWZAPORT}&quot;,&quot;-a&quot;,&quot;all&quot;]</key>
+                    <delay>30</delay>
+                    <history>20</history>
+                    <trends>0</trends>
+                    <status>0</status>
+                    <value_type>TEXT</value_type>
+                    <allowed_hosts/>
+                    <units></units>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description>Define macros:&#13;
+&#13;
+{$WOWZAHOST}&#13;
+{$WOWZAPORT}&#13;
+{$WOWZAUSER}&#13;
+{$WOWZAPASS}&#13;
 &#13;
 for authentication.</description>
                     <inventory_link>0</inventory_link>
