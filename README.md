@@ -59,8 +59,13 @@ I am using this script in my production environment:
 * Zabbix > 6.4.x 
 
 
-Notes
+Screenshots
 -----
+
+![zabbix_wowza_screenshot1](https://github.com/RocketWebcast/wowza-zabbix-template/assets/135097798/f083251b-115c-40eb-b2aa-d892fc8a53a9)
+
+
+![zabbix_wowza_screenshot2](https://github.com/RocketWebcast/wowza-zabbix-template/assets/135097798/a3f892e1-730d-4fb9-80ff-54e0a345bc72)
 
 
 
