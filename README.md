@@ -41,9 +41,9 @@ Choose the XML file and import.
 Apply this new template to your Wowza servers.
 Make sure the firewall is not preventing zabbix from accessing the port (8086 by default).
 
-To enable the user/pass you will need to create two user macros wherever you prefer. I am using the Macros tag in the host config screen.
+To enable the user/pass you will need to create four macros wherever you prefer. I am using the Macros tag in the host config screen.
 
-Four user macros should be created:
+Four host macros should be created:
 
 * {$WOWZAHOST}
 * {$WOWZAPORT}
