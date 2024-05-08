@@ -9,7 +9,7 @@ This is a minimal template to get info about your wowza rest url into your Zabbi
 
 You will get the following metrics out of Wowza:
 
-* Global connections in the Wowza
+* Global current connections in Wowza
 * Global Live streams number
 * Server Uptime
 * Global total connections
