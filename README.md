@@ -5,7 +5,7 @@ Description
 -----------
 
 This is a fork from vicendominguez/wowza-zabbix-template. I had a hard time finding a script that would work with current versions of python, most of them are 8+ years old. They use depreciated libraries, so I re-wrote this one - it uses urllib3 to fetch the data. I also expanded on the information getting back from Wowza.
-This is a minimal template to get info about your wowza rest url in your Zabbix Platform.
+This is a minimal template to get info about your wowza rest url into your Zabbix Platform.
 
 You will get the following metrics out of Wowza:
 
